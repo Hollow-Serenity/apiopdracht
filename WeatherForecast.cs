@@ -1,6 +1,6 @@
 using System;
 
-namespace StudentApi
+namespace TodoApi
 {
     public class WeatherForecast
     {

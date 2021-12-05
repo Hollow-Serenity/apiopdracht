@@ -12,9 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using StudentApi.Models;
+using TodoApi.Models;
 
-namespace StudentApi
+namespace TodoApi
 {
     public class Startup
     {
@@ -30,8 +30,8 @@ namespace StudentApi
         {
 
             services.AddControllers();
-            services.AddDbContext<StudentContext>(opt =>
-                                               opt.UseInMemoryDatabase("Studenten"));
+            services.AddDbContext<TodoContext>(opt =>
+                                               opt.UseInMemoryDatabase("TodoList"));
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoApi", Version = "v1" });
@@ -49,7 +49,6 @@ namespace StudentApi
             }
             app.UseDefaultFiles();
             app.UseStaticFiles();
-
 
             app.UseHttpsRedirection();
 
